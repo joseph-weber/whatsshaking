@@ -20,6 +20,13 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        { this.state.cocktail ?
+        <Results
+        cocktails={this.state.cocktail}
+        />
+        :
+        ""
+        }
         <Search
         getCocktail = {this.getCocktail}
         cocktails = {this.state.cocktail}
